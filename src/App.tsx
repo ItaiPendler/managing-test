@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import Draggable from "react-draggable";
 import { missions, people, Person } from "./db";
