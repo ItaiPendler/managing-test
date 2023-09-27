@@ -1,32 +1,35 @@
 import "./App.css";
-import Draggable from "react-draggable";
 import { missions, people, Person } from "./db";
+import Mission from "./Mission";
 
 const App = () => {
   const clickname = (index: number) => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const data: Person = people[index];
     alert(`${data.name}\n ${data.descrption}`);
   };
   return (
     <>
       <div>
-            <h1 style={{ textAlign: "center" }}>משימות</h1>
+        <h1 style={{ textAlign: "center" }}>משימות</h1>
 
-        <div style={{ position: "absolute",  bottom: 0,
-      left: '0m',
-      width: '20%',
-      display: 'grid',
-      gridTemplateColumns: 'repeat(2, 1fr)',
-      gridGap: '10px',
-      padding: '10px' }}>
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: "0m",
+            width: "20%",
+            display: "grid",
+            gridTemplateColumns: "repeat(2, 1fr)",
+            gridGap: "10px",
+            padding: "10px",
+          }}
+        >
           {missions.map((el) => (
-            <Draggable>
-              <div className="box">
-                <h4>{el.title}</h4>
-                <div>{el.description}</div>
-              </div>
-            </Draggable>
+            <Mission
+              key={el.title}
+              description={el.description}
+              title={el.title}
+            />
           ))}
         </div>
       </div>

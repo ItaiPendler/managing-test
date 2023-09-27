@@ -10,6 +10,14 @@ body {
     margin: 0;
 }
 
+.editbutton {
+    border: none;
+    background-color: #0099FF;
+    border-radius: 25%;
+    color: white;
+    font-size: 12px;
+}
+
 
 .react-draggable,
 .cursor {
