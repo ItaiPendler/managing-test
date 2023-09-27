@@ -6,17 +6,12 @@ const App = () => {
   const clickname = (index: number) => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const data: Person = people[index];
-    console.log("clicked!");
     alert(`${data.name}\n ${data.descrption}`);
   };
   return (
     <>
       <div>
-        <div>
-          <div style={{ textAlign: "center" }}>
-            <h1>משימות</h1>
-          </div>
-        </div>
+            <h1 style={{ textAlign: "center" }}>משימות</h1>
 
         <div style={{ position: "absolute",  bottom: 0,
       left: '0m',
