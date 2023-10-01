@@ -19,7 +19,7 @@ const Mission: React.FC<MissionProps> = ({
         <h4>{title}</h4>
         {isEdit ? (
           <input
-            type="week"
+            type="text"
             value={newDescription}
             maxLength={200}
             onChange={(event) => setNewDescription(event.target.value)}
